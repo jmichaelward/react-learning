@@ -1,0 +1,43 @@
+# Introducing JSX
+## Additional Notes
+
+If a tag is empty, you may close it with a slash, a la XML.
+e.g., const element = <img src={user.avatarUrl} />;
+
+JSX tags may also contain children. e.g.,
+const element = (
+	<div>
+		<h1>Hello</h1>
+		<h2>Good to see you here.</h2>
+	</div>
+);
+
+By default, React DOM escapes any values embedded in JSX before rendering them.
+
+Babel compiles JSX down to React.createElement calls. These two examples are identical:
+
+const element = (
+	<h1 className="greeting">
+	  Hello, world!
+	</h1>
+);
+
+const element = React.createElement(
+	'h1',
+	{className: 'greeting'},
+	'Hello, world!'
+);
+
+React.createElement() performs some checks to ensure bug-free code, but this all boils down to:
+
+const element = {
+	type: 'h1',
+	props: {
+		className: 'greeting',
+		children: 'Hello, world!'
+	}
+}
+
+These objects are React elements, which explains how you can use things like this.props when working within a component.
+Genius!
+ 
