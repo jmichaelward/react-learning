@@ -5,10 +5,18 @@ import './index.css';
 import Welcome from './Welcome';
 import registerServiceWorker from './registerServiceWorker';
 
-const element = <Welcome name="Jeremy Ward"/>;
+function App() {
+	return (
+		<div>
+			<Welcome name="Jeremy Ward"/>
+			<Welcome name="Abby"/>
+			<Welcome name="Flip"/>
+		</div>
+	)
+}
 
 ReactDOM.render(
-	element,
+	<App />,
 	document.getElementById('root')
 );
 registerServiceWorker();
