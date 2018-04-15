@@ -21,6 +21,11 @@ import React, { Component } from 'react';
 
  If the Clock component is ever removed from the DOM, React calls the componentWillUnmount() lifecycle hook so the
  timer is stopped.
+
+ Additional notes:
+ - The only place where you can set this.state is the constructor. Otherwise, use this.setState({});
+ - State updates may be asynchronous - React may batch multiple setState() calls.
+ --- Do not rely on this.props and this.state values for calculating the next state.
  */
 
 class Clock extends Component {
