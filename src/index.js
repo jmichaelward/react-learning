@@ -19,8 +19,9 @@ const user = {
 };
 
 // Note: Multiline elements should be wrapped in parens to avoid "pitfalls of automatic semicolon insertion."
+// The h1 in this example is demonstrating the use of JavaScript expressions within an attribute.
 const element = (
-	<h1>
+	<h1 title={formatName(user)}>
 		Hello, {formatName(user)}!
 	</h1>
 );
