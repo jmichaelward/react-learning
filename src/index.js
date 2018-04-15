@@ -18,6 +18,7 @@ const user = {
 	lastName: "Ward"
 };
 
+// Note: Multiline elements should be wrapped in parens to avoid "pitfalls of automatic semicolon insertion."
 const element = (
 	<h1>
 		Hello, {formatName(user)}!
