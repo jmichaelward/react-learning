@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Avatar from './Avatar.js';
 
 class Comment extends Component {
 	formatDate(date) {
@@ -9,11 +10,7 @@ class Comment extends Component {
 		return (
 			<div className="Comment">
 				<div className="UserInfo">
-					<img
-						className="Avatar"
-						src={this.props.author.avatarUrl}
-						alt={this.props.author.name}
-					/>
+					<Avatar user={this.props.author} />
 					<div className="UserInfo-name">
 						{this.props.author.name}
 					</div>
