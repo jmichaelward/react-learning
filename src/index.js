@@ -1,12 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import NumberList from './component/NumberList';
 import './index.css';
 //import App from './App';
-import Toggle from './component/Toggle';
 import registerServiceWorker from './registerServiceWorker';
 
+const numbers = [1, 2, 3, 4, 5];
+
 ReactDOM.render(
-	<Toggle />,
+	<NumberList numbers={numbers} />,
 	document.getElementById('root')
 );
 
